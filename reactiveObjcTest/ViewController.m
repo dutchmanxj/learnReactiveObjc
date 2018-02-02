@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ReactiveObjc.h"
+#import "mainView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *inputFielde;
 
 @end
 
@@ -16,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIView *bgview = [[mainView alloc] initWithFrame:CGRectMake(0, 0, 320, 640)];
+    [self.view addSubview:bgview];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
